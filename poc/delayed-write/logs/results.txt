@@ -1,0 +1,105 @@
+sudo ./operation   -s -168 -X 15 -i 100 -t 8 -P -m 100
+
+100 tests were run:
+  61/100 >> array[0] = 0x1212121212121212
+  39/100 >> array[0] = 0xabababababababab
+
+------   CALCULATION ERROR DETECTED   ------
+  > Time spent            : 0.038277 seconds
+  > Max Iterations        : 00000100
+  > Milli_secs            : 00000100
+  > Faulted Thread        : 7/8
+  > Iterations            : 00000060
+  > array[0]              : abababababababab
+  > array[ARRAY_SIZE_TEST]: 1212121212121212
+  > Starting op1          : 000000ffffffffff
+  > Mode                  : COMPARE
+  > xor result            : 0000000000000001
+  > undervoltage          : -170
+  > temperature           : +55.0°C
+  > Frequency             : 2000MHz
+
+[00] 0xabababababababab 
+[01] 0xabababababababab 
+[02] 0xabababababababab 
+[03] 0xabababababababab 
+[04] 0xabababababababab 
+[05] 0xabababababababab 
+[06] 0xabababababababab 
+[07] 0xabababababababab 
+[08] 0x1212121212121212 
+[09] 0x1212121212121212 
+[10] 0x1212121212121212 
+[11] 0x1212121212121212 
+[12] 0x1212121212121212 
+[13] 0x1212121212121212 
+[14] 0x1212121212121212 
+[15] 0x1212121212121212 
+
+
+
+------   CALCULATION ERROR DETECTED   ------
+  > Time spent            : 0.000386 seconds
+  > Max Iterations        : 00000100
+  > Milli_secs            : 00000100
+  > Faulted Thread        : 0/8
+  > Iterations            : 00000066
+  > array[0]              : 1212121212121212
+  > array[ARRAY_SIZE_TEST]: abababababababab
+  > Starting op1          : 000000ffffffffff
+  > Mode                  : COMPARE
+  > xor result            : 0000000000000001
+  > undervoltage          : -174
+  > temperature           : +54.0°C
+  > Frequency             : 2000MHz
+
+[00] 0x1212121212121212 
+[01] 0xabababababababab 
+[02] 0xabababababababab 
+[03] 0xabababababababab 
+[04] 0xabababababababab 
+[05] 0xabababababababab 
+[06] 0xabababababababab 
+[07] 0xabababababababab 
+[08] 0xabababababababab 
+[09] 0xabababababababab 
+[10] 0xabababababababab 
+[11] 0xabababababababab 
+[12] 0xabababababababab 
+[13] 0x1212121212121212 
+[14] 0x1212121212121212 
+[15] 0x1212121212121212 
+
+
+
+------   CALCULATION ERROR DETECTED   ------
+  > Time spent            : 0.047834 seconds
+  > Max Iterations        : 00000100
+  > Milli_secs            : 00000100
+  > Faulted Thread        : 0/8
+  > Iterations            : 00000048
+  > array[0]              : abababababababab
+  > array[ARRAY_SIZE_TEST]: 1212121212121212
+  > Starting op1          : 000000ffffffffff
+  > Mode                  : COMPARE
+  > xor result            : 0000000000000001
+  > undervoltage          : -171
+  > temperature           : +55.0°C
+  > Frequency             : 1997MHz
+
+[00] 0xabababababababab 
+[01] 0xabababababababab 
+[02] 0xabababababababab 
+[03] 0xabababababababab 
+[04] 0xabababababababab 
+[05] 0xabababababababab 
+[06] 0xabababababababab 
+[07] 0xabababababababab 
+[08] 0x1212121212121212 
+[09] 0x1212121212121212 
+[10] 0x1212121212121212 
+[11] 0x1212121212121212 
+[12] 0x1212121212121212 
+[13] 0x1212121212121212 
+[14] 0x1212121212121212 
+[15] 0x1212121212121212 

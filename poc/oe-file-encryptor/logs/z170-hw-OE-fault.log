@@ -1,0 +1,25 @@
+Undervolting parameters: 
+Num of iterations:700
+Num of blocks:10
+Svid repeats:1
+Start fault voltage:0.650000
+Current fault voltage:0.640000
+Pre voltage :0.700000
+Pre delay:30
+Post voltage:0.830000
+Post delay:-35
+Pre glitch delay:600
+The rand:1600956642Host: terminate the enclave
+Host: Sample completed successfully.
+
+
+Key:
+A9B16CB5AB8214D891C11330DFA4A857
+Plaintext:
+ec514f1f3fc10d6219e6fb4489d3a3e9
+Correct ciphertext:
+25d9b70f776e345178cf753b3a6dca25
+Faulty ciphertext:
+b8f3466bc35bfe63f73432102df2c0b6
+
+sudo ./host/file-encryptorhost -i 700 -r 1 -v 0.645 -p 0.7 -d 30 -a 0.83 -b -30 -g 600

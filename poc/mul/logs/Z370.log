@@ -1,0 +1,47 @@
+coretemp-isa-0000
+Adapter: ISA adapter
+Package id 0:  +26.0°C  (high = +80.0°C, crit = +100.0°C)
+Core 0:        +24.0°C  (high = +80.0°C, crit = +100.0°C)
+Core 1:        +24.0°C  (high = +80.0°C, crit = +100.0°C)
+Core 2:        +26.0°C  (high = +80.0°C, crit = +100.0°C)
+Core 3:        +22.0°C  (high = +80.0°C, crit = +100.0°C)
+
+sched_getaffinity = 0 1 0 0
+Trigger serial: opened port /dev/ttyS0
+Teensy serial: opened port /dev/ttyACM0
+retries %
+num_packets 1
+pre_voltage 1.050000
+pre_delay  35
+glitch_voltage 0.810000
+rst_voltage 1.050000
+rst_delay 20
+target_func_id 0
+max_iterations 10000000
+operand1 11403264
+operand2 24
+TEST:20------Start glitching------
+send: delay 300
+~send: 1 1.0500 35 0.8100 20 1.0500
+resp: 1 1.0500 35 0.8100 20 1.0500
+(1 times) 1.050V -> delay 35 -> 0.810V -> delay 83 -> 1.050V
+resp:Armed!
+MUL
+
+------   [MUL] CALCULATION ERROR DETECTED   ------
+ > Iterations  	 : 00126490
+ > Operand 1   	 : 0000000000ae0000
+ > Operand 2   	 : 0000000000000018
+ > Correct     	 : 0000000010500000
+ > Result      	 : 0000000010500000
+ > Result      	 : 000000000c500000
+ > xor result  	 : 000000001c000000
+coretemp-isa-0000
+Adapter: ISA adapter
+Package id 0:  +26.0°C  (high = +80.0°C, crit = +100.0°C)
+Core 0:        +23.0°C  (high = +80.0°C, crit = +100.0°C)
+Core 1:        +26.0°C  (high = +80.0°C, crit = +100.0°C)
+Core 2:        +23.0°C  (high = +80.0°C, crit = +100.0°C)
+Core 3:        +22.0°C  (high = +80.0°C, crit = +100.0°C)
+
+3.4Ghz

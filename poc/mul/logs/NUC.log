@@ -1,0 +1,54 @@
+tryagain@tryagain-bagger:~/undervolt-dev/glitch_controller_c$ sudo ./glitch_controller -b 9600 -p /dev/ttyACM0 -d 200 --retries 1000 --num_p 1 --pre_volt 0.94 --pre_delay 35 --glitch_voltage 0.71 --rst_volt 1.05  --rst_delay "-55" --target_id 0 --iter 100000000 --calc_thread_num 1 --calc_op1 0xae0000 --calc_op2 0x18 --freq 2GHz -gTriggered!
+coretemp-isa-0000
+Adapter: ISA adapter
+Package id 0:  +32.0°C  (high = +100.0°C, crit = +100.0°C)
+Core 0:        +32.0°C  (high = +100.0°C, crit = +100.0°C)
+Core 1:        +31.0°C  (high = +100.0°C, crit = +100.0°C)
+
+sched_getaffinity = 0 1 0 0
+Teensy serial: opened port /dev/ttyACM0
+retries %
+num_packets 1
+pre_voltage 0.940000
+pre_delay  35
+glitch_voltage 0.710000
+rst_voltage 1.050000
+rst_delay -55
+target_func_id 0
+max_iterations 100000000
+operand1 11403264
+operand2 24
+frequency 2GHz
+Setting cpu: 0
+Setting cpu: 1
+Setting cpu: 2
+Setting cpu: 3
+Setting cpu: 0
+Setting cpu: 1
+Setting cpu: 2
+Setting cpu: 3
+cpu MHz		: 2000.986
+cpu MHz		: 2000.114
+cpu MHz		: 2002.414
+cpu MHz		: 2001.455
+TEST:-55------Start glitching------
+send: delay 200
+resp:
+(0 times) 0.000V -> delay 0 -> 0.000V -> delay 40 -> 0.000V
+send: 1 0.9400 35 0.7100 -55 1.0500
+resp: delay
+Delay Set!
+1 0.9400 35 0.7100 -55 1.0500
+resp:(1 times) 0.940V -> delay 35 -> 0.710V -> delay 8 -> 1.050V
+Armed!
+MUL
+
+------   [MUL] CALCULATION ERROR DETECTED   ------
+ > Iterations  	 : 00041827
+ > Operand 1   	 : 0000000000ae0000
+ > Operand 2   	 : 0000000000000018
+ > Correct     	 : 0000000010500000
+ > Result      	 : 0000000010500000
+ > Result      	 : 000000000c500000
+ > xor result  	 : 000000001c000000
+

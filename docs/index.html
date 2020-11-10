@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYSTRHRZHX"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-QYSTRHRZHX');
+      </script>
+    
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>VoltPillager | CPU undervolting with low-cost tools</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="VoltPillager" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="CPU undervolting with low-cost tools" />
+<meta property="og:description" content="CPU undervolting with low-cost tools" />
+<meta property="og:site_name" content="VoltPillager" />
+<script type="application/ld+json">
+{"headline":"VoltPillager","url":"/voltpillager/","description":"CPU undervolting with low-cost tools","name":"VoltPillager","@type":"WebSite","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+<style type="text/css">
+/*#logo {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10%;
+}*/
+</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/voltpillager/assets/css/style.css?v=399ac87dde5a1b1bca700395162106c2eb606b65">
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <div style="text-align:center" ><img src="./logo.png" width="250" height="250" id="logo"/></div>
+
+      <!-- <h1 class="project-name">VoltPillager</h1> -->
+      <h2 class="project-tagline">CPU undervolting with low-cost tools</h2>
+        <a href="https://www.usenix.org/system/files/sec21summer_chen-zitai.pdf" class="btn">Read Paper</a>
+        <a href="./#cite" class="btn">Cite Paper</a>
+
+        <a href="#videos" class="btn">Watch Videos</a>
+      
+        <a href="https://github.com/zt-chen/voltpillager" class="btn">View on GitHub</a>
+      
+        
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <p>VoltPillager: Hardware undervolting attacks on Intel SGX with a 30$ tool</p>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>Previous work such as <a href="https://plundervolt.com">Plundervolt</a> has shown that <em>software-based</em> undervolting can induce faults into Intel SGX enclaves and break their security guarantees. However, Intel have addressed this issue with microcode updates.</p>
+
+<p>With VoltPillager, we show that <em>hardware-based</em> undervolting can achieve the same (and more) as Plundervolt, and bypass all currently available countermeasures for SGX.</p>
+
+<p>We leverage that on a standard motherboard, there is a separate Voltage Regulator (VR) chip that generates and controls the CPU voltage. Our tool VoltPillager can connect to the (unprotected) interface of the VR and control that voltage. Based on this, we then mount fault-injection attacks that breach confidentiality and integrity of Intel SGX enclaves, and present proof-of-concept key-recovery attacks against cryptographic algorithms running inside SGX.</p>
+
+<p>VoltPillager is a low-cost device, based on a standard Teensy microcontroller board, and can be built for ~30$. The academic paper will be presented at Usenix Security 2021.</p>
+
+<p>Our result may require a rethink of the widely assumed SGX adversarial model, where a cloud provider hosting SGX machines is assumed to be untrusted but has physical access to the hardware.</p>
+
+<h2 id="building-voltpillager">Building VoltPillager</h2>
+
+<p>All sources and PoC code can be found in our <a href="https://github.com/zt-chen/voltpillager">Github repo</a>.</p>
+
+<p>The bill of materials for building VoltPillager is:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Material</th>
+      <th style="text-align: left">Cost</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Teensy 4.0 Development Board</td>
+      <td style="text-align: left">22$</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Bus Driver/ Buffer * 2</td>
+      <td style="text-align: left">1$</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">SOT IC Adapter * 2</td>
+      <td style="text-align: left">13$ for 6</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><em>Total</em></td>
+      <td style="text-align: left"><strong>36$</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="demo-videos">Demo videos</h2>
+
+<p><a name="videos"></a></p>
+
+<script>
+   
+function changeVideo(videoId, height) {
+    document.getElementById('videolist').innerHTML =
+        "<iframe src='https://www.youtube.com/embed/" + videoId + "' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"
+    document.getElementById('videolist').style.height=height
+}
+
+var getFirstBrowserLanguage = function () {
+    var nav = window.navigator,
+    browserLanguagePropertyKeys = ['language', 'browserLanguage', 'systemLanguage', 'userLanguage'],
+    i,
+    language;
+
+    // support for HTML 5.1 "navigator.languages"
+    if (Array.isArray(nav.languages)) {
+      for (i = 0; i < nav.languages.length; i++) {
+        language = nav.languages[i];
+        if (language && language.length) {
+          return language;
+        }
+      }
+    }
+
+    // support for other well known properties in browsers
+    for (i = 0; i < browserLanguagePropertyKeys.length; i++) {
+      language = nav[browserLanguagePropertyKeys[i]];
+      if (language && language.length) {
+        return language;
+      }
+    }
+
+    return null;
+  };
+
+console.log(getFirstBrowserLanguage());
+
+</script>
+
+<style>
+.embed-container { position: relative; padding-bottom: 56.25%; height: 970px; overflow: hidden; max-width: 100%; } 
+.embed-container iframe, 
+.embed-container object, 
+.embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+#innerdiv {
+  display: table;
+  margin: 0 auto;
+}
+
+#outerdiv {
+  width:100%;
+  height: auto;
+}
+
+.intext_button {
+  background-color: #15935c;
+  border: none;
+  color: white;
+  padding: 9px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 8px;
+}
+
+
+</style>
+
+<div id="outerdiv">
+<div id="videolist" class="embed-container">
+
+
+<iframe src="https://www.youtube.com/embed/XjcKDfWAup8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+
+<div id="innerdiv">
+
+<button type="button" class="intext_button" onclick="changeVideo('XjcKDfWAup8', '970px')">Multiply</button>
+<button type="button" class="intext_button" onclick="changeVideo('jXkcJ3vEGrw', '970px')">SGX AES-NI</button>
+<button type="button" class="intext_button" onclick="changeVideo('8BL5UREpWCE', '970px')">OpenEnclave File Encryptor</button>
+<button type="button" class="intext_button" onclick="changeVideo('A9mGoYCXQqE', '468px')">Buffer Overflow/Underflow</button>
+</div>
+
+</div>
+
+<h2 id="faq">FAQ</h2>
+
+<h3 id="what-is-intel-sgx">What is Intel SGX?</h3>
+
+<p>Intel Software Guard Extensions (SGX) is a set of security-related instruction codes that are built into modern Intel CPUs. SGX allows to shield sensitive computations inside so-called “enclaves”. The contents of these enclaves are protected and cannot be accessed or modified from outside the enclave. Intel SGX is also often assumed to protect the trusted code from attackers who have physical control of the platform, such as an untrusted cloud provider. This thread model is widely adopted by cloud service providers such as <a href="https://web.archive.org/web/20191206233429/https://azure.microsoft.com/en-gb/solutions/confidential-compute/">Azure</a> and SGX software developers such as <a href="https://web.archive.org/web/20201001235308/https://fortanix.com/intel-sgx/">Fortanix</a>, <a href="https://github.com/enarx/enarx/wiki/Threat-Model">Enarx</a> and many others.</p>
+
+<h3 id="does-an-attacker-need-physical-access-to-my-computer-for-this">Does an attacker need physical access to my computer for this?</h3>
+
+<p>Yes - this attack cannot be carried out remotely.</p>
+
+<h3 id="so-your-attacks-require-physical-access---why-is-this-a-realistic-threat-model">So your attacks require physical access - why is this a realistic threat model?</h3>
+
+<p>Intel SGX is widely assumed to provide protection against physical attackers, e.g. a malicious cloud provider providing SGX hosting. A number of research papers and industry applications are built on top of the assumption that a cloud provider with control of a server cannot “look” inside or manipulate the enclave’s memory.</p>
+
+<p>Our results show that extremely low-cost attacks are possible with physical access, questioning the security of many cloud-side applications of SGX and highlighting the need for appropriate countermeasures.</p>
+
+<p>More details on the threat model can also be found in Section 1.4 of our paper.</p>
+
+<h3 id="do-the-patches-for-cve-2019-11157-plundervolt-protect-against-voltpillager">Do the patches for CVE-2019-11157 (Plundervolt) protect against VoltPillager?</h3>
+
+<p>No, these patches simply disable the software undervolting interface, but the hardware interface remains active (in fact, it is an important mechanism of the power management of modern CPUs, and cannot be removed or disabled).</p>
+
+<h3 id="im-not-using-sgx---do-i-need-to-be-worried">I’m not using SGX - do I need to be worried?</h3>
+
+<p>Probably not - VoltPillager attacks are mainly relevant for the case of SGX enclaves. In any case, typical end-user CPUs, operating systems, and applications running outside SGX were never designed to protect against attacks with physical access?</p>
+
+<h3 id="should-i-stop-using-and-throw-away-my-cpu-now">Should I stop using and throw away my CPU now?</h3>
+
+<p>No!</p>
+
+<h3 id="is-there-a-cve-and-how-did-intel-respond">Is there a CVE, and how did Intel respond?</h3>
+
+<p>We reported this issue to Intel on 13 March 2020. Intel evaluated our report and concluded on 5 May that “… opening the case and tampering of internal hardware to compromise SGX is out of scope for SGX threat model. Patches for CVE-2019-11157 (<a href="https://plundervolt.com/">Plundervolt</a>) were not designed to protect against hardware-based attacks as per the threat model”, and, therefore, they will not further address the issue. Intel have not requested an embargo for the vulnerabilities described in this paper, and not assigned a CVE.</p>
+
+<h3 id="im-using-sgx-for-my-cloud-application---how-can-i-protect-against-this-issue">I’m using SGX for my cloud application - how can I protect against this issue?</h3>
+
+<p>It is unlikely that there will be a microcode update or new CPU generation to prevent such attacks. If you trust your cloud provider, there is probably little you need to do. If your cloud provider is in your threat model, then the best you can currently do is to protect against fault injection through software countermeasures (for example running computations redundantly, etc.).</p>
+
+<h3 id="where-can-i-find-the-code-and-more-information">Where can I find the code and more information?</h3>
+
+<p>All sources and PoC code can be found in our <a href="https://github.com/zt-chen/voltpillager">Github repo</a>.</p>
+
+<h3 id="can-i-use-the-logo">Can I use the logo?</h3>
+
+<p>Yes. The logo is free to use, rights waived via <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>. Logos are designed by <a href="http://www.mikestimpson.com/photography/">Mike Stimpson</a>.</p>
+
+<p><a href="/voltpillager/logo.png">PNG</a></p>
+
+<p><a name="cite"></a></p>
+<h2 id="cite-the-paper">Cite the paper</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@inproceedings {Chen2021voltpillager,
+title = {VoltPillager: Hardware-based fault injection attacks against Intel {SGX} Enclaves using the {SVID} voltage scaling interface},
+booktitle = {30th {USENIX} Security Symposium ({USENIX} Security 21)},
+year = {2021},
+address = {Vancouver, B.C.},
+url = {https://www.usenix.org/conference/usenixsecurity21/presentation/chen-zitai},
+publisher = {{USENIX} Association},
+month = aug,
+}
+</code></pre></div></div>
+
+<h2 id="acknowledgements">Acknowledgements</h2>
+<p>This research is partially funded by the Engineering and Physical Sciences Research Council (EPSRC) under grants EP/R012598/1, EP/R008000/1, EP/V000454/1, by the European Union’s Horizon 2020 research and innovation programme under grant agreement No. 779391 (FutureTPM), and by the Paul and Yuanbi Ramsay Endowment Fund.</p>
+
+
+      <footer class="site-footer">
+        
+          <span class="site-footer-owner"><a href="https://github.com/zt-chen/voltpillager-website">voltpillager-website</a> is maintained by <a href="https://github.com/zt-chen">zt-chen</a>.</span>
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

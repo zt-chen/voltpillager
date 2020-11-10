@@ -1,0 +1,10 @@
+enclave {
+	trusted {
+        public void enclave_calculation(int iterations);
+	};
+	
+	untrusted {
+	 	void ocall_print_string([in, string] const char *str);
+		void ocall_phex([in,size=len]const uint8_t* print_me, int len);
+	};
+};

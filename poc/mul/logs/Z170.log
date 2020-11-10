@@ -1,0 +1,49 @@
+tryagain@tryagain-Z170X-Gaming-3:~/undervolt-dev/glitch_controller_c$ sensors
+coretemp-isa-0000
+Adapter: ISA adapter
+Package id 0:  +22.0°C  (high = +80.0°C, crit = +100.0°C)
+Core 0:        +22.0°C  (high = +80.0°C, crit = +100.0°C)
+Core 1:        +21.0°C  (high = +80.0°C, crit = +100.0°C)
+
+0x18 -g_id 0 --iter 10000000 --calc_thread_num 1 --calc_op1 0xae0000 --calc_op2 0
+coretemp-isa-0000
+Adapter: ISA adapter
+Package id 0:  +23.0°C  (high = +80.0°C, crit = +100.0°C)
+Core 0:        +22.0°C  (high = +80.0°C, crit = +100.0°C)
+Core 1:        +22.0°C  (high = +80.0°C, crit = +100.0°C)
+
+sched_getaffinity = 0 1 0 0
+Trigger serial: opened port /dev/ttyS0
+Teensy serial: opened port /dev/ttyACM0
+retries %
+num_packets 1
+pre_voltage 0.830000
+pre_delay  35
+glitch_voltage 0.640000
+rst_voltage 0.830000
+rst_delay -30
+target_func_id 0
+max_iterations 10000000
+operand1 11403264
+operand2 24
+TEST:-30------Start glitching------
+send: delay 1000
+resp:delay
+Delay Set!
+send: 1 0.8300 35 0.6400 -30 0.8300
+resp: 1 0.8300 35 0.6400 -30 0.8300
+(1 times) 0.830V -> delay 35 -> 0.640V -> delay 29 -> 0.830V
+resp:Armed!
+MUL
+
+------   [MUL] CALCULATION ERROR DETECTED   ------
+ > Iterations  	 : 00090236
+ > Operand 1   	 : 0000000000ae0000
+ > Operand 2   	 : 0000000000000018
+ > Correct     	 : 0000000010500000
+ > Result      	 : 0000000010500000
+ > Result      	 : 000000000c500000
+ > xor result  	 : 000000001c000000
+
+ Frequency: 2Ghz
+sudo ./glitch_controller -b 9600 -p /dev/ttyACM0 -d 1000 --retries 1000 --num_p 1 --pre_volt 0.83 --pre_delay 35 --glitch_voltage 0.64 --rst_volt 0.83 --rst_delay "-30" --target_id 0 --iter 10000000 --calc_thread_num 1 --calc_op1 0xae0000 --calc_op2 0x18 -g

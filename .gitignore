@@ -1,0 +1,10 @@
+*.a
+*.pyc
+*.so
+*.o
+/.idea/
+/venv/
+additional/precision/oscilloscope_capture/
+*/__init__.py
+*/*/__init__.py
+*/*/*/__init__.py

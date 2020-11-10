@@ -1,0 +1,10 @@
+[submodule "additional/dfa-aes"]
+	path = additional/dfa-aes
+	url = https://github.com/Daeinar/dfa-aes
+[submodule "additional/sgx-software-enable"]
+	path = additional/sgx-software-enable
+	url = https://github.com/intel/sgx-software-enable.git
+[submodule "additional/intel-oc-mbox"]
+	path = additional/intel-oc-mbox
+	url = https://github.com/fortanix/intel-oc-mbox.git
+	branch = jb/initial
