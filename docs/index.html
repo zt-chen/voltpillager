@@ -22,7 +22,7 @@
 <meta property="og:description" content="CPU undervolting with low-cost tools" />
 <meta property="og:site_name" content="VoltPillager" />
 <script type="application/ld+json">
-{"headline":"VoltPillager","url":"/voltpillager/","description":"CPU undervolting with low-cost tools","name":"VoltPillager","@type":"WebSite","@context":"https://schema.org"}</script>
+{"url":"/voltpillager/","headline":"VoltPillager","description":"CPU undervolting with low-cost tools","name":"VoltPillager","@type":"WebSite","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 <style type="text/css">
@@ -34,7 +34,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="stylesheet" href="/voltpillager/assets/css/style.css?v=399ac87dde5a1b1bca700395162106c2eb606b65">
+    <link rel="stylesheet" href="/voltpillager/assets/css/style.css?v=2d5237bfd72296fb1abf37a850367a0a242b7548">
   </head>
   <body>
     <a id="skip-to-content" href="#content">Skip to the content.</a>
@@ -55,7 +55,7 @@
     </header>
 
     <main id="content" class="main-content" role="main">
-      <p>VoltPillager: Hardware undervolting attacks on Intel SGX with a 30$ tool</p>
+      <p>VoltPillager: Hardware undervolting attacks on Intel SGX with a $30 tool</p>
 
 <h2 id="introduction">Introduction</h2>
 
@@ -63,11 +63,13 @@
 
 <p>With VoltPillager, we show that <em>hardware-based</em> undervolting can achieve the same (and more) as Plundervolt, and bypass all currently available countermeasures for SGX.</p>
 
-<p>We leverage that on a standard motherboard, there is a separate Voltage Regulator (VR) chip that generates and controls the CPU voltage. Our tool VoltPillager can connect to the (unprotected) interface of the VR and control that voltage. Based on this, we then mount fault-injection attacks that breach confidentiality and integrity of Intel SGX enclaves, and present proof-of-concept key-recovery attacks against cryptographic algorithms running inside SGX.</p>
+<p>On a standard motherboard, there is a separate Voltage Regulator (VR) chip that generates and controls the CPU voltage. Our tool, VoltPillager, uses this to connect to the (unprotected) interface of the VR and control that voltage. Based on this, we then mount fault-injection attacks that breach confidentiality and integrity of Intel SGX enclaves, and present proof-of-concept key-recovery attacks against cryptographic algorithms running inside SGX.</p>
 
-<p>VoltPillager is a low-cost device, based on a standard Teensy microcontroller board, and can be built for ~30$. The academic paper will be presented at Usenix Security 2021.</p>
+<p>VoltPillager is a low-cost device, based on a standard Teensy microcontroller board, and can be built for $30.</p>
 
-<p>Our result may require a rethink of the widely assumed SGX adversarial model, where a cloud provider hosting SGX machines is assumed to be untrusted but has physical access to the hardware.</p>
+<p>The academic paper will be presented at Usenix Security 2021.</p>
+
+<p>Our results may require a rethink of the widely assumed SGX adversarial model, where a cloud provider hosting SGX machines is assumed to be untrusted but has physical access to the hardware.</p>
 
 <h2 id="building-voltpillager">Building VoltPillager</h2>
 
@@ -85,19 +87,19 @@
   <tbody>
     <tr>
       <td style="text-align: left">Teensy 4.0 Development Board</td>
-      <td style="text-align: left">22$</td>
+      <td style="text-align: left">$ 22</td>
     </tr>
     <tr>
       <td style="text-align: left">Bus Driver/ Buffer * 2</td>
-      <td style="text-align: left">1$</td>
+      <td style="text-align: left">$  1</td>
     </tr>
     <tr>
       <td style="text-align: left">SOT IC Adapter * 2</td>
-      <td style="text-align: left">13$ for 6</td>
+      <td style="text-align: left">$ 13 for 6</td>
     </tr>
     <tr>
       <td style="text-align: left"><em>Total</em></td>
-      <td style="text-align: left"><strong>36$</strong></td>
+      <td style="text-align: left"><strong>$36</strong></td>
     </tr>
   </tbody>
 </table>
@@ -198,7 +200,7 @@ console.log(getFirstBrowserLanguage());
 
 <h3 id="what-is-intel-sgx">What is Intel SGX?</h3>
 
-<p>Intel Software Guard Extensions (SGX) is a set of security-related instruction codes that are built into modern Intel CPUs. SGX allows to shield sensitive computations inside so-called “enclaves”. The contents of these enclaves are protected and cannot be accessed or modified from outside the enclave. Intel SGX is also often assumed to protect the trusted code from attackers who have physical control of the platform, such as an untrusted cloud provider. This thread model is widely adopted by cloud service providers such as <a href="https://web.archive.org/web/20191206233429/https://azure.microsoft.com/en-gb/solutions/confidential-compute/">Azure</a> and SGX software developers such as <a href="https://web.archive.org/web/20201001235308/https://fortanix.com/intel-sgx/">Fortanix</a>, <a href="https://github.com/enarx/enarx/wiki/Threat-Model">Enarx</a> and many others.</p>
+<p>Intel Software Guard Extensions (SGX) is a set of security-related instructions that are built into modern Intel CPUs. SGX allows to shield sensitive computations inside so-called “enclaves”. The contents of these enclaves are protected and cannot be accessed or modified from outside the enclave. Intel SGX is also often assumed to protect the trusted code from attackers who have physical control of the platform, such as an untrusted cloud provider. This thread model is widely adopted by cloud service providers such as <a href="https://web.archive.org/web/20191206233429/https://azure.microsoft.com/en-gb/solutions/confidential-compute/">Azure</a> and SGX software developers such as <a href="https://web.archive.org/web/20201001235308/https://fortanix.com/intel-sgx/">Fortanix</a>, <a href="https://github.com/enarx/enarx/wiki/Threat-Model">Enarx</a> and many others.</p>
 
 <h3 id="does-an-attacker-need-physical-access-to-my-computer-for-this">Does an attacker need physical access to my computer for this?</h3>
 
